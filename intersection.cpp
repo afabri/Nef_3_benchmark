@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
   }
 
   {
-    std::ifstream in((argc > 1) ? argv[1] : "data/shiftedspheregrid.off");
+    std::ifstream in((argc > 2) ? argv[2] : "data/shiftedspheregrid.off");
     in >> B;
   }
 
@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
     Nef_polyhedron nefC = nefA.intersection(nefB);
     t_boolean = t.time();
 
-    std::cout << nefC.number_of_vertices() << "    " ;
+    std::cout << nefC.number_of_vertices() << " vertices  " << std::endl;
 
   }
 
